@@ -1,0 +1,20 @@
+[
+  {
+    "id": "4210c4cf-f75e-49bd-9fe1-640a89727456",
+    "email": "sayakm1269@gmail.com",
+    "meetName": "meeting1",
+    "meetLink": "abcd.com"
+  },
+  {
+    "id": "5a1b0f68-fe92-43a8-b2a2-17f8a046c7d9",
+    "email": "sayakm1269@gmail.com",
+    "meetName": "meeting2",
+    "meetLink": "abcd.com.com"
+  },
+  {
+    "id": "b0b03f35-c28e-4827-9ba6-3233cb4a3308",
+    "email": "msayak1269@gmail.com",
+    "meetName": "meeting1",
+    "meetLink": "https://meet.google.com/gpj-tedb-sbw"
+  }
+]

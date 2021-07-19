@@ -1,0 +1,9 @@
+  var firebaseConfig = {
+    apiKey: "AIzaSyAAkzHSqj7DYMgtkvNS6jcs7tuo4b9Ew-4",
+    authDomain: "meeting-maneger.firebaseapp.com",
+    projectId: "meeting-maneger",
+    storageBucket: "meeting-maneger.appspot.com",
+    messagingSenderId: "320036068179",
+    appId: "1:320036068179:web:59599fbba2eafd66379fa6",
+    measurementId: "G-6S60XBCP2B"
+  };

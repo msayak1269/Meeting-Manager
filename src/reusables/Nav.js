@@ -16,7 +16,7 @@ const Nav = () => {
         }
     }
     const logoutUser = () => {
-        var r = window.confirm("Confirm?");
+        var r = window.confirm("You want to Logout?");
         if (r === true) {
             Cookies.remove("userId");
             history.push("/login");

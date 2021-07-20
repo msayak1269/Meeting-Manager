@@ -40,7 +40,7 @@ const Profile = () => {
 
     }
     const logoutUser = () => {
-        var r = window.confirm("Logout ?");
+        var r = window.confirm("You want to Logout?");
         if (r === true) {
             Cookies.remove("userId");
             history.push("/login");

@@ -31,7 +31,7 @@ const Home = () => {
             })
     }
     const handleDelete = (id) => {
-        var r = window.confirm("Confirm?")
+        var r = window.confirm("You want to Delete the meeting info?")
         if(r==true){
             fetch(`https://meetingmanagerapi.pythonanywhere.com/api/delete/${id}`, {
             method: "DELETE",

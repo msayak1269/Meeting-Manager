@@ -115,7 +115,7 @@ const Home = () => {
                         <Link to="/add">
                             <div className="btn btn-outline-success"
                                 style={{
-                                    borderRadius: "20%",
+                                    borderRadius: "50px",
                                 }}
                             ><i className="fa fa-plus"
                                 style={{

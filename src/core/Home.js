@@ -19,7 +19,6 @@ const Home = () => {
             history.push("/login")
         }
     }
-    setTimeout(()=>{
         const getMeetings = () => {
             fetch(`https://meetingmanagerapi.pythonanywhere.com/api/getmeetings/${Cookies.get("userId")}`, {
                 method: "GET",
@@ -32,8 +31,7 @@ const Home = () => {
                     setMeetingsOfUser(data.meetings)
                     setLoading(false)
                 })
-        }
-    },100)
+            }
     const handleDelete = (id) => {
         var r = window.confirm("You want to Delete the meeting info?")
         if(r==true){

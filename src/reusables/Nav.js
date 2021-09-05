@@ -29,11 +29,11 @@ const Nav = () => {
     return (
         <div className="container-fluid">
             <div className="bg-dark p-3 text-white">
-                <div className="row d-flex justify-content-center text-center">
+                <div className="d-flex justify-content-center text-center">
                     <Link to="/profile">
                         <div className="btn btn-outline-warning"
                             style={{
-                                borderRadius: "20%",
+                                // borderRadius: "50%",
                             }}
                             ><i className="fa fa-user"
                                 style={{
@@ -42,10 +42,11 @@ const Nav = () => {
                             ></i>
                         </div>
                     </Link>
-                    <div className="col-4"><h2>Meeting Manager</h2></div>
+                    {/* <div className="col-6"><h3>Meeting Manager</h3></div> */}
+                    <div className="col-6">Meeting Manager</div>
                     <div className="btn btn-outline-danger"
                         style={{
-                            borderRadius: "20%",
+                            // borderRadius: "50%",
                         }}
                         onClick={logoutUser}><i className="fa fa-sign-out-alt"
                             style={{

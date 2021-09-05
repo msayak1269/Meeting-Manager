@@ -1,0 +1,55 @@
+                    {
+                        meetingsOfUser.length > 0 ?
+                            (
+                                <table className="table table-hover table-dark"
+                                    style={{
+                                        borderRadius: "20px"
+                                    }}
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">About</th>
+                                            <th scope="col">Join</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    {meetingsOfUser.map((meeting) => {
+                                        return (
+                                            <tbody>
+                                                <tr>
+                                                    <td>{meeting.meetName}</td>
+                                                    {/* <td>{meeting.meetLink}</td> */}
+                                                    <td>
+                                                        <a href={meeting.meetLink} target="_blank">
+                                                            <div className="btn btn-info"
+                                                            ><i className="fa fa-video"
+                                                                style={{
+                                                                    fontSize: "30px"
+                                                                }}
+                                                            ></i>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div className="btn btn-danger"
+                                                            onClick={() => {
+                                                                handleDelete(meeting.id);
+                                                            }}
+                                                        ><i className="fa fa-trash"
+                                                            style={{
+                                                                fontSize: "30px"
+                                                            }}
+                                                        ></i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        )
+                                    })}
+                                </table>
+                            )
+                            :
+                            (
+                                <h4 className="text-center">No Meetings</h4>
+                            )
+                    }

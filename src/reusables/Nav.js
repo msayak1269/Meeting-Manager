@@ -42,7 +42,7 @@ const Nav = () => {
                             ></i>
                         </div>
                     </Link>
-                    <div className="col-4">Meeting Manager</div>
+                    <div className="col-4"><h2>Meeting Manager</h2></div>
                     <div className="btn btn-outline-danger"
                         style={{
                             borderRadius: "20%",

@@ -9,6 +9,7 @@ const Home = () => {
     const history = useHistory()
     const [userId, setUserId] = useState("")
     const [meetingsOfUser, setMeetingsOfUser] = useState([])
+    const[loading,setLoading]=useState(true)
     const checkAuth = () => {
         var id = Cookies.get("userId")
         if (id) {
@@ -18,18 +19,21 @@ const Home = () => {
             history.push("/login")
         }
     }
-    const getMeetings = () => {
-        fetch(`https://meetingmanagerapi.pythonanywhere.com/api/getmeetings/${Cookies.get("userId")}`, {
-            method: "GET",
-            mode: "cors",
-        })
-            .then(response => {
-                return response.json()
+    setTimeout(()=>{
+        const getMeetings = () => {
+            fetch(`https://meetingmanagerapi.pythonanywhere.com/api/getmeetings/${Cookies.get("userId")}`, {
+                method: "GET",
+                mode: "cors",
             })
-            .then(data => {
-                setMeetingsOfUser(data.meetings)
-            })
-    }
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+                    setMeetingsOfUser(data.meetings)
+                    setLoading(false)
+                })
+        }
+    },100)
     const handleDelete = (id) => {
         var r = window.confirm("You want to Delete the meeting info?")
         if(r==true){
@@ -56,8 +60,9 @@ const Home = () => {
         <Base>
             <div>
                 <div className="container text-center mt-3">
+                    {loading && <h2>Loading...</h2>}
                     {
-                        meetingsOfUser.length > 0 ?
+                        meetingsOfUser.length > 0 && 
                             (
                                 <table className="table table-hover table-dark"
                                     style={{
@@ -106,12 +111,15 @@ const Home = () => {
                                     })}
                                 </table>
                             )
-                            :
-                            (
-                                <h4 className="text-center">No Meetings</h4>
-                            )
+                            // :
+                            // (
+                            //     
+                            // )
                     }
-                    <div className="text-center">
+                    { !loading && meetingsOfUser.length==0 && (
+                        <h2 className="text-center">No Meetings</h2>
+                    )}
+                    <div className="text-center m-3 pull-left">
                         <Link to="/add">
                             <div className="btn btn-outline-success"
                                 style={{

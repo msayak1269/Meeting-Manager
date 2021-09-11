@@ -54,7 +54,11 @@ const Login = () => {
     }
     return ( 
         <div className="d-flex align-items-center justify-content-center" style={{height:"100vh"}}>
-            <div className="btn btn-primary" onClick={handleLogin}>Login with Google</div>
+            <div className="btn btn-primary" onClick={handleLogin}
+              style={{
+                borderRadius:"50px"
+              }}
+            >Login with Google</div>
             
         </div>
      );
